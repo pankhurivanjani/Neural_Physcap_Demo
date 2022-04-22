@@ -22,6 +22,8 @@ Authors: Soshi Shimada  Vladislav Golyanik  Weipeng Xu  Patrick Pérez and Chris
 1) Download pretrained model from [here](https://drive.google.com/file/d/1ViIDOiCkBcUUm_BIS3W1z2ELRTKYIbBQ/view?usp=sharing). Below, we assume all the pretrained networks are place under "../pretrained_neuralPhys/".
  
 2) We provide a sample data under "sample_data" To run the code on our sample data, first go to root directory (neuralphyscap_demo_release) and run:
+		
+		export PYTHONPATH=$PYTHONPATH:/home/vanjani/rbdl/python
 
 		python demo.py  --input_path sample_data/sample_dance.npy --net_path ../pretrained_neuralPhys/  --img_width 1280 --img_height 720
 
