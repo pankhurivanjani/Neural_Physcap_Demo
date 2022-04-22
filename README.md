@@ -8,6 +8,13 @@ Authors: Soshi Shimada  Vladislav Golyanik  Weipeng Xu  Patrick Pérez and Chris
 - Python 3.7
 - Ubuntu 18.04 (The system should run on other Ubuntu versions and Windows, however not tested.)
 - RBDL: Rigid Body Dynamics Library (https://rbdl.github.io/). Tested on  V.2.6.0.  (Important: set "RBDL_BUILD_ADDON_URDFREADER " to be "ON" when you compile. Also don't forget to add the compiled rbdl library in your python path use it.)
+
+For RBDL Compilation:
+
+	cmake -D CMAKE_BUILD_TYPE=Release -D RBDL_BUILD_ADDON_URDFREADER=ON -D RBDL_BUILD_PYTHON_WRAPPER=ON ../
+	make -j8
+	sudo make install not working properly here.. https://github.com/rbdl/rbdl/issues/29
+
 - pytorch 1.10.1
 - For other python packages, please check requirements.txt
 
@@ -23,7 +30,7 @@ Authors: Soshi Shimada  Vladislav Golyanik  Weipeng Xu  Patrick Pérez and Chris
  
 2) We provide a sample data under "sample_data" To run the code on our sample data, first go to root directory (neuralphyscap_demo_release) and run:
 		
-		export PYTHONPATH=$PYTHONPATH:/home/vanjani/rbdl/python
+		export PYTHONPATH=$PYTHONPATH:/home/vanjani/rbdl/build/python
 
 		python demo.py  --input_path sample_data/sample_dance.npy --net_path ../pretrained_neuralPhys/  --img_width 1280 --img_height 720
 
