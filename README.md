@@ -122,3 +122,6 @@ python process_openpose.py --input_path /home/vanjani/openpose/output_json_folde
 ```
 ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 fullbody.mp4
 ```
+
+Current trouble: Openpose rotates some of the videos 
+
