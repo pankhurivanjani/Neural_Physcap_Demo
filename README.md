@@ -43,6 +43,9 @@ The predictions will be saved under "./results/"
 ## How to Run on Your Data
 1. Run [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and save the prediction.
 
+Working resource for openpose on ubuntu 18.04
+
+https://tyseng.medium.com/openpose-python-in-ubuntu-18-04-installation-guide-2021-5c09f4f2efe2
 
 2. Process your openpose data to be compatible with NeuralPhyscap:
  
