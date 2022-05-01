@@ -90,3 +90,35 @@ or publication that results from the work:
 	keywords = {Monocular 3D Human Motion Capture, Physical Awareness, Global 3D, Physionical Approach}
 }
 ```
+
+Terminal instructions
+
+
+Openpose 
+
+```
+./build/examples/openpose/openpose.bin --video fulldoor.mp4 --write_json output_json_folder_fulldoor/
+```
+
+
+```
+ python demo.py --input_path sample_data/paundoor.npy --net_path trained_models/ --img_width 352 --img_height  640
+
+```
+
+
+```
+python Visualizations/simple.py 
+
+```
+
+
+```
+python process_openpose.py --input_path /home/vanjani/openpose/output_json_folder_paundoor/ --save_file_name paundoor.npy
+
+```
+
+
+```
+ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 fullbody.mp4
+```
